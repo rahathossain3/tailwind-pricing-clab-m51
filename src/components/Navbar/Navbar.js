@@ -15,14 +15,16 @@ const Navbar = () => {
         { id: 5, name: 'Contact', link: './contact' },
     ]
     return (
-        <nav>
+        <nav className=' bg-indigo-200'>
             <div onClick={() => setOpen(!open)} className='w-6 h-6 md:hidden'>
                 {/* jodi open thake taile X : na thakle menuIcon ------ */}
                 {open ? <XIcon></XIcon> : <MenuIcon> </MenuIcon>}
             </div>
 
-            {/* jodi open thke taile open er por kaj korbe : na thakle custom open kaj korbe. [custom value set kora jay]  */}
-            <ul className={`md:flex justify-center absolute duration-500 ease-in ${open ? 'top-6' : 'top-[-120px]'}`}>
+            {/* jodi open thke taile open er por kaj korbe : na thakle custom open kaj korbe. [custom value set kora jay] 
+            // stattic for larg device
+            */}
+            <ul className={`md:flex justify-center md:static bg-indigo-200 w-full absolute duration-500 ease-in ${open ? 'top-6' : 'top-[-120px]'}`}>
                 {
                     routes.map(route => <Link
                         key={route.id}
