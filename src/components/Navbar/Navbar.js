@@ -17,8 +17,11 @@ const Navbar = () => {
     return (
         <nav>
             <div onClick={() => setOpen(!open)} className='w-6 h-6 md:hidden'>
+                {/* jodi open thake taile X : na thakle menuIcon ------ */}
                 {open ? <XIcon></XIcon> : <MenuIcon> </MenuIcon>}
             </div>
+
+            {/* jodi open thke taile open er por kaj korbe : na thakle custom open kaj korbe. [custom value set kora jay]  */}
             <ul className={`md:flex justify-center absolute duration-500 ease-in ${open ? 'top-6' : 'top-[-120px]'}`}>
                 {
                     routes.map(route => <Link
