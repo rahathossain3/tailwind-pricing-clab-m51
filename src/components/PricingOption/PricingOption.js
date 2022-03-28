@@ -12,6 +12,10 @@ const PricingOption = (props) => {
                 <span className='text-5xl font-bold'> {price}</span>
                 <span className='text-xl font-bold text-gray-500'>/mo</span>
             </p>
+            <div>
+                <h3 className='text-xl text-left'>Benefits</h3>
+                <p></p>
+            </div>
         </div>
     );
 };
